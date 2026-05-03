@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-brand-brown: #3C2A21;
+  --color-brand-coffee: #5E454B;
+  --color-brand-gold: #C5A059;
+  --color-brand-dark: #1A120B;
+  --color-whatsapp: #25D366;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FAF7F5] text-brand-dark antialiased;
+  }
+}
+
+.premium-blur {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.btn-shadow {
+  box-shadow: 0 10px 30px -10px rgba(60, 42, 33, 0.15);
+}
+
+.card-shadow {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

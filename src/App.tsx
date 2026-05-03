@@ -17,6 +17,12 @@ import LeadForm from './components/LeadForm';
 export default function App() {
   const properties = [
     {
+      image: 'https://i.postimg.cc/NMk4mYgp/Whats-App-Image-2024-09-26-at-13-43-33.jpg',
+      type: 'Apartamento (2 Suítes)',
+      location: 'Vistas Jardins, Viva Park Porto Belo',
+      price: 'R$ 1.900.000'
+    },
+    {
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
       type: 'Casa de Luxo',
       location: 'Brava, Balneário Camboriú',
@@ -27,16 +33,11 @@ export default function App() {
       type: 'Penthouse Oceânica',
       location: 'Centro, Balneário Camboriú',
       price: 'R$ 12.900.000'
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800',
-      type: 'Mansão em Condomínio',
-      location: 'Estaleiro, Balneário Camboriú',
-      price: 'R$ 15.000.000'
     }
   ];
 
   const whatsappNumber = '47991994599';
+  const whatsappMessage = encodeURIComponent('Olá! Vim pelo link da bio e gostaria de mais informações.');
 
   return (
     <div className="min-h-screen px-4 pb-24 pt-16 max-w-lg mx-auto">
@@ -96,7 +97,7 @@ export default function App() {
       {/* ACTION BUTTONS */}
       <section className="space-y-5 mb-20">
         <LinkButton 
-          href={`https://wa.me/55${whatsappNumber}`} 
+          href={`https://wa.me/55${whatsappNumber}?text=${whatsappMessage}`} 
           label="Consultoria no WhatsApp" 
           variant="whatsapp"
           icon={MessageCircle}

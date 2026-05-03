@@ -42,9 +42,16 @@ export default function App() {
   return (
     <div className="min-h-screen px-4 pb-24 pt-16 max-w-lg mx-auto">
       {/* Background Decorative Element */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          style={{ 
+            backgroundImage: 'url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600")',
+            filter: 'blur(10px) brightness(0.9)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/95" />
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl opacity-50" />
-        <div className="absolute top-1/2 -left-24 w-64 h-64 bg-brand-brown/5 rounded-full blur-3xl opacity-50" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-gold/10 rounded-full blur-[100px] opacity-30" />
       </div>
 
@@ -56,10 +63,10 @@ export default function App() {
           transition={{ duration: 0.8, ease: "backOut" }}
           className="relative inline-block mb-8"
         >
-          <div className="w-36 h-36 rounded-full p-1.5 border-2 border-brand-gold/40 shadow-xl">
+          <div className="w-44 h-44 rounded-full p-2 border-2 border-brand-gold/40 shadow-2xl">
             <div className="w-full h-full rounded-full overflow-hidden bg-white">
               <img 
-                src="https://i.postimg.cc/MpXHd1C6/GMHW2287.jpg" 
+                src="https://i.postimg.cc/GhwDr6dm/Whats-App-Image-2026-05-03-at-18-11-09.jpg" 
                 alt="Laurício Festa" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -70,9 +77,9 @@ export default function App() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring" }}
-            className="absolute -bottom-1 -right-1 bg-white p-1 rounded-full shadow-lg border border-brand-brown/5"
+            className="absolute bottom-2 right-2 bg-white p-1 rounded-full shadow-lg border border-brand-brown/5"
           >
-            <BadgeCheck className="w-7 h-7 text-brand-gold fill-brand-brown" />
+            <BadgeCheck className="w-8 h-8 text-brand-gold fill-brand-brown" />
           </motion.div>
         </motion.div>
 
@@ -82,7 +89,7 @@ export default function App() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <p className="text-[10px] tracking-[0.4em] font-semibold text-brand-gold uppercase mb-3">
-            Real Estate Specialist
+            ESPECIALISTA EM INVESTIMENTOS IMOBILIÁRIOS
           </p>
           <h1 className="font-serif text-5xl text-brand-brown mb-4 tracking-tight leading-none">
             Laurício Festa
@@ -102,6 +109,11 @@ export default function App() {
           variant="whatsapp"
           icon={MessageCircle}
           priority
+        />
+        <LinkButton 
+          href="https://instagram.com/lauriciofesta" 
+          label="@lauriciofesta" 
+          icon={Instagram}
         />
         <LinkButton 
           href="https://seusite.com.br" 
@@ -165,7 +177,7 @@ export default function App() {
         </motion.div>
         
         <div className="flex justify-center gap-10 text-brand-brown/40 mb-10">
-          <motion.a whileHover={{ y: -5, color: '#3C2A21' }} href="#" className="transition-all">
+          <motion.a whileHover={{ y: -5, color: '#3C2A21' }} href="https://instagram.com/lauriciofesta" target="_blank" rel="noopener noreferrer" className="transition-all">
             <Instagram size={24} />
           </motion.a>
           <motion.a whileHover={{ y: -5, color: '#3C2A21' }} href="#" className="transition-all">
